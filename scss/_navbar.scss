@@ -1,0 +1,81 @@
+// Styling for the navbar
+#mainNav {
+  font-family: $font-family;
+  font-weight: $font-weight;
+  text-transform: uppercase;
+  border: none;
+  background: $theme-primary;
+  height: 110px;
+  
+  a:focus {
+    outline: none;
+  }
+  
+
+  .navbar-nav {
+    letter-spacing: 1px;
+    li.nav-item {
+      a.nav-link {
+        color: white;
+        &:hover {
+          color: $theme-secondary;
+          outline: none;
+        }
+        &:active,
+        &:focus {
+          color: white;
+        }
+      }
+    }
+  }
+  
+  .navbar-toggler {
+    font-size: 14px;
+    padding: 11px;
+    text-transform: uppercase;
+    color: white;
+    border-color: white;
+    float: right;
+    &:focus,
+    &:hover {
+      color: $theme-primary;
+      border-color: $theme-secondary;
+      background-color: $theme-secondary;
+    }
+  }
+  
+  #comp-claim {
+      color: $theme-secondary;
+      text-align: center;
+  }
+}
+@media(min-width:992px) {
+  #mainNav {
+    -webkit-transition: padding-top 0.3s, padding-bottom 0.3s;
+    -moz-transition: padding-top 0.3s, padding-bottom 0.3s;
+    transition: padding-top 0.3s, padding-bottom 0.3s;
+    .navbar-brand {
+      -webkit-transition: all 0.3s;
+      -moz-transition: all 0.3s;
+      transition: all 0.3s;
+    }
+    .navbar-nav > li.nav-item > a.nav-link.active {
+      color: white;
+      border-radius: 3px;
+      background: $theme-secondary;
+      &:active,
+      &:focus,
+      &:hover {
+        color: white;
+        background: $theme-secondary;
+      }
+    }
+  }
+  #mainNav.navbar-shrink {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    .navbar-brand {
+      font-size: 1.5em;
+    }
+  }
+}

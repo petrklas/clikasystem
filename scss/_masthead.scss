@@ -1,0 +1,123 @@
+// Styling for the masthead
+header.masthead {
+    padding-top: 110px;
+    padding-bottom: 50px;
+    text-align: center;
+    color: $color-black;
+    background: $background;
+
+    .subheader {
+        background: url('../img/header_pattern.png') repeat-x;
+        height: 100px;
+        max-height: 100px;
+        padding-top: 15px;
+        text-align: center;
+
+        .intro-text .name {
+            font-family: $font-family;
+            font-size: 1.4em;
+            font-weight: $font-weight-bold;
+            display: block;
+            text-transform: uppercase;
+        }
+    }
+
+    .intro {
+        height: 870px;
+
+        #handle-back {
+            width: 486px;
+            height: 696px;
+            position: absolute;
+            background: url('../img/handle_back.png') no-repeat;
+            top: 40px;
+        }
+
+        @include keyframes(handle-animation) {
+            0% { top: 392px; }
+            50% { top: 407px; }
+            100% { top: 392px; }
+        }
+
+        #handle {
+            span#handle-desc {
+               display: block;
+               margin: -30px 150px 0 0px;
+               @include rotate(2);
+               float: right;
+            }
+            
+            width: 681px;
+            height: 125px;
+            position: absolute;
+            background: url('../img/handle.png') no-repeat;
+            top: 392px;
+            left: 215px;
+            @include animation('handle-animation 1s linear infinite alternate');
+        }
+
+        #door_closed {
+            width: 151px;
+            height: 224px;
+            background: url('../img/door_closed.png') no-repeat;
+            position: absolute;
+            top: 60px;
+            right: 0px;
+            
+            span {
+                display: block;
+                margin-top: -30px;
+                @include rotate(2);
+            }
+        }
+        
+        #door_open {
+            width: 146px;
+            height: 223px;
+            background: url('../img/door_open.png') no-repeat;
+            position: absolute;
+            bottom: 60px;
+            right: 0px;
+            
+            span {
+                display: block;
+                margin-top: -30px;
+                @include rotate(2);
+            }
+        }
+        
+        .triangle {
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-style: inset;
+
+            &.small {
+                border-width: 8px 13px 8px 0;
+                border-color: transparent #dcdcdb transparent transparent;
+            }
+            &.medium {
+                border-width: 14px 23px 14px 0;
+                border-color: transparent #c4c4c3 transparent transparent;
+            }
+            &.large {
+                border-width: 20px 32px 20px 0;
+                border-color: transparent #adadab transparent transparent;
+            }
+
+
+        }
+    }
+
+}
+@media(max-width:576px) {
+    header.masthead {
+        .subheader {
+            height: 80px;
+            max-height: 80px;
+            .intro-text {
+                font-size: 0.8em;
+            }
+        }
+    }
+}
