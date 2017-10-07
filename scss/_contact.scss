@@ -68,7 +68,9 @@ footer {
     margin-bottom: 50px;
   }
   .footer-below {
-    padding: 25px 0;
-    background-color: darken($theme-primary, .05);
+    padding: 15px 0;
+    background-color: $background;
+    color: $color-black;
+    font-size: 0.8em;
   }
 }

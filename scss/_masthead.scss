@@ -1,7 +1,6 @@
 // Styling for the masthead
 header.masthead {
     padding-top: 110px;
-    padding-bottom: 50px;
     text-align: center;
     color: $color-black;
     background: $background;
@@ -25,6 +24,10 @@ header.masthead {
     .intro {
         height: 870px;
 
+        span {
+            font-weight: 500;
+        }
+        
         #handle-back {
             width: 486px;
             height: 696px;
@@ -91,6 +94,7 @@ header.masthead {
             height: 0;
             border-style: solid;
             border-style: inset;
+            position: absolute;
 
             &.small {
                 border-width: 8px 13px 8px 0;
@@ -104,8 +108,45 @@ header.masthead {
                 border-width: 20px 32px 20px 0;
                 border-color: transparent #adadab transparent transparent;
             }
-
-
+        }
+        
+        $arrowtop-top: 180px;
+        $arrowtop-right: 330px;
+        $arrowRotation: 30;
+        #arrow1 {
+            right: $arrowtop-right;
+            top: $arrowtop-top;
+            @include rotate(-$arrowRotation);
+        }
+        
+        #arrow2 {
+            right: $arrowtop-right + 15px;
+            top: $arrowtop-top + 8px;
+            @include rotate(-$arrowRotation);
+         }
+        
+        #arrow3 {
+            right: $arrowtop-right + 40px;
+            top: $arrowtop-top + 20px;
+            @include rotate(-$arrowRotation);
+        }
+        
+        #arrow4 {
+            right: $arrowtop-right + 40px;
+            top: $arrowtop-top + 400px;
+            @include rotate($arrowRotation + 180);
+        }
+        
+        #arrow5 {
+            right: $arrowtop-right + 15px;
+            top: $arrowtop-top + 408px;
+            @include rotate($arrowRotation + 180);
+         }
+        
+        #arrow6 {
+            right: $arrowtop-right - 20px;
+            top: $arrowtop-top + 420px;
+            @include rotate($arrowRotation + 180);
         }
     }
 
