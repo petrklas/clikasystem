@@ -1,8 +1,9 @@
 // Global styling for this template
 body {
   font-family: $font-family;
-  font-weight: $font-weight;
+  font-weight: 500;
   overflow-x: hidden;
+  color: $color-black; 
 }
 
 p {
